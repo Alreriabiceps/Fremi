@@ -27,7 +27,7 @@ export default function ServiceCard({ icon: Icon, title, description, image, ind
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.1 }}
-      className="group relative h-[500px] bg-brand-dark overflow-hidden flex flex-col justify-end p-8 sm:p-12"
+      className="group relative min-h-[380px] h-[420px] sm:min-h-[460px] sm:h-[500px] bg-brand-dark overflow-hidden flex flex-col justify-end p-6 sm:p-8 md:p-12"
     >
       <div className="absolute inset-0 z-0">
         <img
@@ -40,13 +40,13 @@ export default function ServiceCard({ icon: Icon, title, description, image, ind
       </div>
 
       <div className="relative z-10">
-        <div className="w-16 h-16 bg-brand-orange text-brand-dark flex items-center justify-center rounded-2xl mb-8 transform group-hover:rotate-12 transition-transform duration-500">
+        <div className="w-14 h-14 sm:w-16 sm:h-16 bg-brand-orange text-brand-dark flex items-center justify-center rounded-2xl mb-6 sm:mb-8 transform group-hover:rotate-12 transition-transform duration-500 shrink-0">
           <Icon size={32} />
         </div>
-        <h3 className="text-4xl md:text-5xl font-display font-bold text-brand-light mb-6 uppercase tracking-tighter">
+        <h3 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-brand-light mb-4 sm:mb-6 uppercase tracking-tighter">
           {title}
         </h3>
-        <p className="text-brand-light/70 leading-relaxed mb-8 max-w-md opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+        <p className="text-brand-light/70 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 max-w-md opacity-100 md:opacity-0 md:group-hover:opacity-100 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-500">
           {description}
         </p>
         <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-brand-orange font-bold">
@@ -54,7 +54,7 @@ export default function ServiceCard({ icon: Icon, title, description, image, ind
         </div>
       </div>
 
-      <div className="absolute inset-0 border-[1px] border-white/5 group-hover:border-brand-orange/30 transition-colors duration-500 m-4 rounded-xl pointer-events-none" />
+      <div className="absolute inset-0 border-[1px] border-white/5 group-hover:border-brand-orange/30 transition-colors duration-500 m-3 sm:m-4 rounded-xl pointer-events-none" />
     </motion.a>
   );
 }

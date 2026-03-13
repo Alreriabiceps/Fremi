@@ -10,16 +10,16 @@ export default function About() {
   const textX = useTransform(scrollY, [2000, 4000], [-200, 200]);
 
   return (
-    <section id="about" className="py-32 bg-brand-dark text-brand-light overflow-hidden relative">
+    <section id="about" className="py-16 sm:py-24 md:py-32 bg-brand-dark text-brand-light overflow-hidden relative">
       <motion.div
         style={{ x: textX }}
-        className="absolute top-1/2 left-1/2 -translate-y-1/2 text-[15rem] md:text-[30rem] font-display font-black text-white/[0.02] select-none pointer-events-none uppercase whitespace-nowrap"
+        className="absolute top-1/2 left-1/2 -translate-y-1/2 text-[8rem] sm:text-[12rem] md:text-[15rem] lg:text-[30rem] font-display font-black text-white/[0.02] select-none pointer-events-none uppercase whitespace-nowrap"
       >
         Fremi Entreprenør
       </motion.div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -48,9 +48,9 @@ export default function About() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="font-mono text-xs uppercase tracking-[0.3em] text-brand-orange mb-6 block">Velkommen til Fremi!</span>
-            <h2 className="text-5xl md:text-7xl mb-10 tracking-tighter font-black">Din pålitelige <br /> partner</h2>
-            <div className="space-y-6 text-brand-light/70 text-lg font-light leading-relaxed">
+            <span className="font-mono text-xs uppercase tracking-[0.3em] text-brand-orange mb-4 sm:mb-6 block">Velkommen til Fremi!</span>
+            <h2 className="text-4xl sm:text-5xl md:text-7xl mb-8 sm:mb-10 tracking-tighter font-black">Din pålitelige <br /> partner</h2>
+            <div className="space-y-4 sm:space-y-6 text-brand-light/70 text-base sm:text-lg font-light leading-relaxed">
               <p>
                 Fremi utfører grave-, og entreprenørtjenester innen privat- og næringsmarkedet i Møre og Romsdal og omegn. Det er bare å ta kontakt med oss angående arbeidsområder, vi er svært fleksible, og vi skreddersyr løsninger som er tilpasset våre kunder.
               </p>
@@ -62,17 +62,17 @@ export default function About() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12">
-              <div className="border-l-2 border-brand-orange pl-6">
-                <h4 className="text-xl mb-2 font-bold uppercase tracking-tighter">La fagfolk gjøre jobben</h4>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 mt-10 sm:mt-12">
+              <div className="border-l-2 border-brand-orange pl-4 sm:pl-6">
+                <h4 className="text-lg sm:text-xl mb-1.5 sm:mb-2 font-bold uppercase tracking-tighter">La fagfolk gjøre jobben</h4>
                 <p className="text-brand-light/50 text-sm">For å sikre at jobben gjøres riktig, og for å unngå overraskelser er det alltid best å la fagfolk gjøre jobben.</p>
               </div>
-              <div className="border-l-2 border-brand-orange pl-6">
-                <h4 className="text-xl mb-2 font-bold uppercase tracking-tighter">Til avtalt tid og pris</h4>
+              <div className="border-l-2 border-brand-orange pl-4 sm:pl-6">
+                <h4 className="text-lg sm:text-xl mb-1.5 sm:mb-2 font-bold uppercase tracking-tighter">Til avtalt tid og pris</h4>
                 <p className="text-brand-light/50 text-sm">Vi holder det vi lover, og holder deg som kunde oppdatert til enhver tid.</p>
               </div>
-              <div className="border-l-2 border-brand-orange pl-6">
-                <h4 className="text-xl mb-2 font-bold uppercase tracking-tighter">Fleksibel aktør</h4>
+              <div className="border-l-2 border-brand-orange pl-4 sm:pl-6 sm:col-span-2">
+                <h4 className="text-lg sm:text-xl mb-1.5 sm:mb-2 font-bold uppercase tracking-tighter">Fleksibel aktør</h4>
                 <p className="text-brand-light/50 text-sm">Vi kartlegger kundens behov og tilpasser deretter en løsning som begge partner er fornøyd med.</p>
               </div>
             </div>

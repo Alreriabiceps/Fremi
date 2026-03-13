@@ -12,7 +12,7 @@ export default function Hero() {
   const opacity = useTransform(scrollY, [0, 300], [1, 0.5]);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-brand-light">
+    <section id="home" className="relative min-h-screen flex items-center pt-16 sm:pt-20 overflow-hidden bg-brand-light">
       <div className="absolute top-0 right-0 w-full h-full z-0">
         <motion.div
           style={{ y: y1, opacity }}
@@ -30,7 +30,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 w-full relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-9">
             <motion.div
@@ -41,25 +41,25 @@ export default function Hero() {
               <span className="font-mono text-xs uppercase tracking-[0.3em] text-brand-orange mb-6 block bg-brand-light/50 backdrop-blur-sm inline-block px-2 py-1 rounded">
                 Pålitelig og sikker maskinentreprenør
               </span>
-              <h1 className="text-5xl sm:text-8xl lg:text-[11rem] leading-[0.82] mb-8 font-black tracking-tighter">
+              <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-[11rem] leading-[0.82] mb-6 sm:mb-8 font-black tracking-tighter">
                 Kraft <br />
                 <span className="text-stroke text-transparent">Presisjon</span> <br />
                 Tillit
               </h1>
-              <p className="max-w-md text-brand-dark/80 text-lg mb-10 font-medium leading-relaxed bg-brand-light/30 backdrop-blur-sm p-4 rounded-lg border border-white/20">
+              <p className="max-w-md text-brand-dark/80 text-base sm:text-lg mb-8 sm:mb-10 font-medium leading-relaxed bg-brand-light/30 backdrop-blur-sm p-3 sm:p-4 rounded-lg border border-white/20">
                 Vi nyter stor tillit blant våre kunder og kan vise til gode referanser fra tidligere arbeid. Din naturlige partner i Møre og Romsdal.
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-3 sm:gap-4">
                 <a
                   href="#services"
-                  className="bg-brand-dark text-brand-light px-10 py-5 rounded-full font-display font-bold uppercase tracking-tighter flex items-center gap-3 hover:bg-brand-orange transition-all group shadow-xl"
+                  className="bg-brand-dark text-brand-light px-6 py-4 sm:px-10 sm:py-5 rounded-full font-display font-bold uppercase tracking-tighter flex items-center gap-2 sm:gap-3 hover:bg-brand-orange transition-all group shadow-xl min-h-[44px] sm:min-h-0"
                 >
                   Våre Tjenester
-                  <ArrowRight className="group-hover:translate-x-2 transition-transform" size={20} />
+                  <ArrowRight className="group-hover:translate-x-2 transition-transform shrink-0" size={20} />
                 </a>
                 <a
                   href="#contact"
-                  className="bg-white/80 backdrop-blur-sm border border-brand-dark/10 px-10 py-5 rounded-full font-display font-bold uppercase tracking-tighter hover:bg-brand-dark hover:text-brand-light transition-all shadow-lg"
+                  className="bg-white/80 backdrop-blur-sm border border-brand-dark/10 px-6 py-4 sm:px-10 sm:py-5 rounded-full font-display font-bold uppercase tracking-tighter hover:bg-brand-dark hover:text-brand-light transition-all shadow-lg min-h-[44px] sm:min-h-0"
                 >
                   Be om tilbud
                 </a>
@@ -69,7 +69,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-12 left-6 right-6 flex justify-between items-end z-20 gap-6">
+      <div className="absolute bottom-6 left-4 right-4 sm:bottom-12 sm:left-6 sm:right-6 flex flex-col sm:flex-row justify-end sm:justify-between items-stretch sm:items-end z-20 gap-4 sm:gap-6">
         <div className="hidden md:block max-w-[280px] flex-shrink-0 mr-4">
           <div className="flex gap-8 bg-brand-light/40 backdrop-blur-md p-5 rounded-2xl border border-white/20 shadow-xl">
             <div>
@@ -84,15 +84,15 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="flex flex-col items-end gap-4">
-          <div className="bg-brand-dark text-brand-light p-6 rounded-2xl shadow-2xl border border-white/10">
+        <div className="flex flex-col items-stretch sm:items-end gap-3 sm:gap-4">
+          <div className="bg-brand-dark text-brand-light p-4 sm:p-6 rounded-2xl shadow-2xl border border-white/10">
             <div className="font-mono text-[10px] uppercase tracking-widest text-brand-orange mb-1">Hovedkontor</div>
-            <div className="text-xl font-display font-bold uppercase tracking-tighter flex items-center gap-2">
-              <MapPin size={18} className="text-brand-orange" />
+            <div className="text-lg sm:text-xl font-display font-bold uppercase tracking-tighter flex items-center gap-2">
+              <MapPin size={18} className="text-brand-orange shrink-0" />
               Skodje, Norge
             </div>
           </div>
-          <div className="font-mono text-[10px] uppercase tracking-[0.5em] opacity-30 origin-bottom-right">
+          <div className="font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.4em] sm:tracking-[0.5em] opacity-30 origin-bottom-right text-right sm:text-right">
             EST. 2013 • MØRE OG ROMSDAL
           </div>
         </div>

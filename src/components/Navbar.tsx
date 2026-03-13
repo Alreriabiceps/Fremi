@@ -29,9 +29,9 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-brand-light/90 backdrop-blur-md py-4 border-b border-black/5' : 'bg-transparent py-8'}`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-brand-light/90 backdrop-blur-md py-3 border-b border-black/5 md:py-4' : 'bg-transparent py-4 md:py-8'}`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
         <a href="#home" className="flex items-center gap-2 group">
           <div className="w-8 h-8 md:w-10 md:h-10 bg-brand-dark flex items-center justify-center rounded-sm group-hover:bg-brand-orange transition-colors duration-300">
             <span className="text-brand-light font-display font-bold text-lg md:text-xl">F</span>
@@ -94,7 +94,7 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="font-display font-bold text-4xl sm:text-5xl uppercase tracking-tighter text-brand-light hover:text-brand-orange transition-colors"
+                  className="font-display font-bold text-4xl sm:text-5xl uppercase tracking-tighter text-brand-light hover:text-brand-orange transition-colors py-2 block min-h-[44px] flex items-center"
                 >
                   {link.name}
                 </motion.a>

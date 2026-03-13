@@ -18,7 +18,7 @@ export default function App() {
   const { scrollYProgress } = useScroll();
 
   return (
-    <div className="selection:bg-brand-orange selection:text-brand-dark relative">
+    <div className="selection:bg-brand-orange selection:text-brand-dark relative overflow-x-hidden min-h-screen">
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-brand-orange z-[100] origin-left"
         style={{ scaleX: scrollYProgress }}

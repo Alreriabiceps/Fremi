@@ -38,19 +38,19 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-32 bg-brand-light">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="services" className="py-16 sm:py-24 md:py-32 bg-brand-light">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-20 gap-12"
+          className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 sm:mb-20 gap-8 sm:gap-12"
         >
-          <div className="max-w-3xl flex flex-col md:flex-row gap-8 items-start md:items-center">
+          <div className="max-w-3xl flex flex-col md:flex-row gap-6 sm:gap-8 items-start md:items-center">
             <div>
-              <span className="font-mono text-xs uppercase tracking-[0.3em] text-brand-orange mb-4 block">Våre Tjenester</span>
-              <h2 className="text-4xl sm:text-5xl md:text-8xl font-black leading-[0.9] tracking-tighter">Spesialister på <br /> <span className="text-stroke text-transparent">grunnarbeid</span></h2>
+              <span className="font-mono text-xs uppercase tracking-[0.3em] text-brand-orange mb-3 sm:mb-4 block">Våre Tjenester</span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-8xl font-black leading-[0.9] tracking-tighter">Spesialister på <br /> <span className="text-stroke text-transparent">grunnarbeid</span></h2>
             </div>
           </div>
           <p className="max-w-xs text-brand-dark/50 font-mono text-[10px] uppercase leading-relaxed tracking-widest">
@@ -58,7 +58,7 @@ export default function Services() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {services.map((service, i) => (
             <ServiceCard
               key={i}
